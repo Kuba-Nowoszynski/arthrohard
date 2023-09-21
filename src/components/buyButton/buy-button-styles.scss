@@ -1,0 +1,17 @@
+@import "../../variables";
+
+.buy-button {
+  background-color: $tertiary;
+  color: $faded-white;
+  border: 0;
+  padding: 10px 40px;
+  font-size: 1.25rem; //20px for root 16px
+  transition: opacity 0.3s ease-in-out, scale 0.3s ease-in-out;
+  &.red {
+    background-color: #ab303c;
+  }
+  &:hover {
+    opacity: 0.85;
+    scale: 0.98;
+  }
+}

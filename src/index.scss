@@ -48,7 +48,8 @@ body {
   background-color: $faded-white;
   min-width: 320px;
   min-height: 100vh;
-  // overflow-x: hidden;
+  color: $main;
+  overflow-x: hidden;
 }
 
 html,
@@ -67,6 +68,7 @@ ol,
 li {
   margin: 0;
   padding: 0;
+  color: $main;
 }
 
 *,

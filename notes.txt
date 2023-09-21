@@ -1,3 +1,4 @@
-1. import image from '@/assets/my-image.png'; //set @
+
 2. add comments !!!
 3. set error page
+4. add framer motion slide in on scroll

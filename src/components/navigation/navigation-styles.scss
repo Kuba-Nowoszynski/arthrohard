@@ -5,6 +5,11 @@
   text-transform: uppercase;
   position: relative;
   box-shadow: 0 0 10px 1px rgba(black, 0.5);
+  .navigation-content {
+    width: 100vw;
+    max-width: 1440px;
+    position: relative;
+  }
   /* Logo Styles */
   .navbar-brand {
     position: absolute;
@@ -31,7 +36,7 @@
       transition: opacity 0.3s ease-in-out, scale 0.3s ease-in-out;
       &:hover {
         opacity: 0.7;
-        scale: 1.03;
+        scale: 1.01;
       }
       /* Active List Item Indicator Styles */
       &.active {

@@ -1,0 +1,72 @@
+@import "../../variables";
+
+.banner {
+  position: relative;
+  @media screen and (max-width: 1024px) {
+    overflow: hidden;
+  }
+  .description {
+    width: 90%;
+    @include responsive-mobile(width, 100%);
+    h2 {
+      font-size: 2.5rem; //48px for root 16px
+      @include responsive-mobile(font-size, 2rem);
+      /* Faded gradient text */
+      background: linear-gradient(90deg, #111 -8.85%, #b1b1b1 116.12%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p {
+      width: 90%;
+      font-size: 1.25rem; //20px for root 16px
+      @include responsive-mobile(font-size, 1rem);
+      margin: 1.25rem 0;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("@/assets/other/bg-shape.png") no-repeat;
+    background-size: contain;
+    scale: 0.2;
+    transform: rotate(-110.265deg);
+    bottom: -25%;
+    right: -50%;
+    // Adjust positioning for larger screens
+    @media screen and (min-width: 1500px) {
+      bottom: -30%;
+      right: -55%;
+    }
+    @media screen and (min-width: 1700px) {
+      bottom: -30%;
+      right: -65%;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("@/assets/other/bg-shape.png") no-repeat;
+    background-size: contain;
+    scale: 0.4;
+    transform: rotate(-154.14deg);
+    bottom: -55%;
+    right: -50%;
+    // Adjust positioning for larger screens
+    @media screen and (min-width: 1500px) {
+      bottom: -60%;
+      right: -52%;
+    }
+    @media screen and (min-width: 1700px) {
+      right: -65%;
+    }
+    // Hide on smaller screens
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import loader from "../../assets/other/loader.gif";
+import loader from "@/assets/other/loader.gif";
 
 import "./loader-styles.scss";
 
