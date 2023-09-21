@@ -1,0 +1,9 @@
+@import "../../variables";
+
+.text-logo {
+  font-size: 1.8125rem; //29px for root 16px
+  font-weight: 500;
+  span {
+    color: $secondary;
+  }
+}
