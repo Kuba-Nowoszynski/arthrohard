@@ -1,0 +1,25 @@
+// Variables and mixins
+
+//Viewports
+$breakpoint-mobile: 768px;
+
+@mixin responsive-mobile($property, $value) {
+  @media (max-width: #{$breakpoint-mobile}) {
+    #{$property}: #{$value};
+  }
+}
+
+//e.g of how to use above
+.example-element {
+  @include responsive-mobile(font-size, 14px);
+  /* Other styles for the element */
+}
+
+//Color pallet:
+$white: #fff;
+$faded-white: #f6f6f6;
+$main: #111;
+$secondary: #ab303c;
+$tertiary: #30ab4c;
+$placeholder1: #d9d9d9;
+$placeholder2: #bebebe;

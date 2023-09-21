@@ -1,0 +1,24 @@
+@keyframes run {
+  25% {
+    transform: translateX(-5%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  75% {
+    transform: translateX(5%);
+  }
+}
+
+.loading-container {
+  height: 100vh;
+
+  .loading-logo {
+    width: 50vw;
+
+    //adjust size for mobile
+    @include responsive-mobile(width, auto);
+    @include responsive-mobile(height, 50vh);
+    animation: run 2s linear infinite;
+  }
+}
