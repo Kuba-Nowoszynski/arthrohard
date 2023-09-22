@@ -5,6 +5,7 @@ import { TextContext } from "../../contexts/TextContext";
 import "./buy-button-styles.scss";
 
 const BuyButton = ({ className }) => {
+  // Get text content from context
   const {
     text: { button: text },
   } = useContext(TextContext);

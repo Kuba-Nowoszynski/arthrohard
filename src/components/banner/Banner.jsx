@@ -13,7 +13,7 @@ const Banner = () => {
     text: { banner: text },
   } = useContext(TextContext);
   return (
-    <div className="banner row g-0 p-3   justify-content-center align-items-center align-items-lg-start flex-column-reverse flex-md-row ">
+    <section className="banner row g-0 p-3   justify-content-center align-items-center align-items-lg-start flex-column-reverse flex-md-row ">
       <div className="col-8 col-md-5  ">
         <img src={bannerImg} alt="Zestaw preparatów" className="img-fluid" />
       </div>
@@ -28,7 +28,7 @@ const Banner = () => {
         </div>
         <BuyButton className="mx-auto" />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,1 +1,146 @@
 @import "../../variables";
+
+.features {
+  overflow: hidden;
+  h2 {
+    position: relative;
+    margin-bottom: 10rem;
+    font-size: 2.5rem; //48px for root 16px
+    @include responsive-mobile(font-size, 2rem);
+    /* Faded gradient text */
+    background: linear-gradient(
+      90deg,
+      #111 -8.85%,
+      #b1b1b1 58.84%,
+      #696969 91.39%,
+      #b1b1b1 116.12%
+    );
+    width: 40%; //change for gradient
+    @include responsive-mobile(width, 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -1.25rem; //20px for root 16px
+      left: 40%;
+      width: 7.875rem; //126px for root 16px
+      height: 1.5px;
+      background: $main;
+      @include responsive-mobile(left, 30%);
+    }
+  }
+  article {
+    @media screen and (min-width: 768px) {
+      width: 30%;
+    }
+    h4 {
+      font-size: 1.9375rem; //31px for root 16px
+      @include responsive-mobile(font-size, 1.5rem);
+      &:last-of-type {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -1.25rem; //20px for root 16px
+          left: 35%;
+          width: 7.875rem; //126px for root 16px
+          height: 1.5px;
+          background: $main;
+        }
+      }
+    }
+    p {
+      font-size: 1.25rem; //20px for root 16px
+      @include responsive-mobile(font-size, 0.9rem);
+      margin: 1.875rem auto; //30px for root 16px
+      width: 90%;
+    }
+    .steps {
+      font-size: 1.25rem; //20px for root 16px
+      @include responsive-mobile(font-size, 0.9rem);
+      margin: 1.875rem 0; //30px for root 16px
+      width: 90%;
+      li {
+        width: max-content;
+        list-style: none;
+        margin: 1.875rem auto; //30px for root 16px
+        .number {
+          width: 2.875rem; //46px for root 16px
+          height: 2.875rem;
+          font-weight: 700;
+          background-color: $white;
+          box-shadow: 0 0 5px 1px rgba(black, 0.2);
+        }
+      }
+    }
+    .double-image-wrapper {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url("@/assets/other/bg-shape.png") no-repeat;
+        background-size: contain;
+        scale: 0.4;
+        transform: rotate(-110.265deg);
+        bottom: -10%;
+        left: -40%;
+        z-index: -1;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url("@/assets/other/bg-shape.png") no-repeat;
+        background-size: contain;
+        scale: 0.35;
+        transform: rotate(-110.265deg);
+        bottom: 20%;
+        right: -55%;
+        z-index: -1;
+      }
+    }
+
+    .image-wrapper {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url("@/assets/other/bg-shape.png") no-repeat;
+        background-size: contain;
+        scale: 0.4;
+        transform: rotate(-110.265deg);
+        bottom: -10%;
+        left: -40%;
+        z-index: -1;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url("@/assets/other/bg-shape.png") no-repeat;
+        background-size: contain;
+        scale: 0.35;
+        transform: rotate(-110.265deg);
+        bottom: 20%;
+        right: -55%;
+        z-index: -1;
+      }
+    }
+    img {
+      height: 14rem;
+      @media screen and (min-width: 1440px) {
+        height: 18.125rem; //290px for root 16px
+      }
+      @include responsive-mobile(height, 14rem);
+    }
+  }
+}

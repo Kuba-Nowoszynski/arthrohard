@@ -6,7 +6,6 @@
   position: relative;
   box-shadow: 0 0 10px 1px rgba(black, 0.5);
   .navigation-content {
-    width: 100vw;
     max-width: 1440px;
     position: relative;
   }
@@ -47,7 +46,7 @@
           left: 0;
           width: 100%;
           height: 1px;
-          background: black;
+          background: $main;
         }
       }
       a {

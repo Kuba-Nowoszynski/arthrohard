@@ -1,7 +1,7 @@
 import Navigation from "../../components/navigation/Navigation";
 import Banner from "../../components/banner/Banner";
 import Features from "../../components/features/Features";
-import Hero from "../../components/hero/Hero";
+import Ingredients from "../../components/ingredients/Ingredients";
 
 import "./home-styles.scss";
 
@@ -12,7 +12,7 @@ const Home = () => {
       <div className="content d-flex flex-column justify-content-center mx-auto">
         <Banner />
         <Features />
-        <Hero />
+        <Ingredients />
       </div>
     </div>
   );
