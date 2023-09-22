@@ -2,6 +2,7 @@
 
 .ingredients {
   background-color: $white;
+  overflow: hidden;
   h2 {
     position: relative;
     font-size: 2.5rem; //48px for root 16px
@@ -40,8 +41,12 @@
       height: 4.375rem;
     }
     h4 {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
       margin-top: 1.25rem; //20px for root 16px
       margin-bottom: 2rem;
+      position: relative;
     }
     h6 {
       font-weight: 400;
@@ -50,6 +55,17 @@
     }
     p {
       font-size: 1.25rem;
+    }
+    &:hover {
+      h4::before {
+        content: "";
+        position: absolute;
+        bottom: -1rem;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: $main;
+      }
     }
   }
   .img-wrapper {

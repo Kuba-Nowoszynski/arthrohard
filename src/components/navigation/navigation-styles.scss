@@ -2,9 +2,14 @@
 
 .navigation {
   background-color: $white;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
   text-transform: uppercase;
   position: relative;
   box-shadow: 0 0 10px 1px rgba(black, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   .navigation-content {
     max-width: 1440px;
     position: relative;
@@ -31,6 +36,7 @@
     }
     /* Individual List Item Styles */
     li {
+      cursor: pointer;
       position: relative;
       transition: opacity 0.3s ease-in-out, scale 0.3s ease-in-out;
       &:hover {

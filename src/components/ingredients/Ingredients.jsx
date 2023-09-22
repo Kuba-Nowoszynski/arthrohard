@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { TextContext } from "../../contexts/TextContext";
+import { motion } from "framer-motion";
 
 import BuyButton from "../buyButton/BuyButton";
 
@@ -13,8 +14,13 @@ const Ingredients = () => {
     text: { ingredients: text },
   } = useContext(TextContext);
   return (
-    <section className="ingredients ">
-      <div className="content mx-auto">
+    <section className="ingredients" id="section2">
+      <motion.div
+        className="content mx-auto"
+        initial={{ opacity: 0, x: -100 }} // Initial state (hidden and shifted to the left)
+        whileInView={{ opacity: 1, x: 0 }} // Animation state (fully visible and in its original position)
+        transition={{ duration: 0.3 }}
+      >
         {" "}
         <h2 className="py-5 mx-auto">{text.header}</h2>
         <h4 className="my-5">{text.subheader}</h4>
@@ -53,7 +59,7 @@ const Ingredients = () => {
           </div>
         </div>
         <img className="img-fluid px-5 mx-auto" src={dogImg} alt="Buldog" />
-      </div>
+      </motion.div>
     </section>
   );
 };

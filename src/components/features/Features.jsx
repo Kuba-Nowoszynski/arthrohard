@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { TextContext } from "../../contexts/TextContext";
+import { motion } from "framer-motion";
 
 import img1 from "@/assets/images/czarci-pazur.png";
 import img2 from "@/assets/images/strzykawka.png";
@@ -13,7 +14,13 @@ const Features = () => {
     text: { features: text },
   } = useContext(TextContext);
   return (
-    <section className="features mb-5">
+    <motion.section
+      className="features mb-5"
+      id="section1"
+      initial={{ opacity: 0, x: 100 }} // Initial state (hidden and shifted to the right)
+      whileInView={{ opacity: 1, x: 0 }} // Animation state (fully visible and in its original position)
+      transition={{ duration: 0.3 }}
+    >
       <h2 className="mx-auto">{text.header}</h2>
       <div className="features-list d-flex flex-column flex-md-row justify-content-between ">
         {text.descriptionFeatures.map(({ title, description }, index) => (
@@ -28,11 +35,13 @@ const Features = () => {
             ))}
             <p className="mx-auto mx-lg-2">{description}</p>
             <div className="image-wrapper  mt-auto mx-auto   ">
-              <img
-                className=" "
-                alt={index === 0 ? "Czarci pazur" : "Strzykawka"}
-                src={index === 0 ? img1 : img2}
-              />
+              <div className="img-hover">
+                <img
+                  className=" "
+                  alt={index === 0 ? "Czarci pazur" : "Strzykawka"}
+                  src={index === 0 ? img1 : img2}
+                />
+              </div>
             </div>
           </article>
         ))}
@@ -54,16 +63,21 @@ const Features = () => {
             ))}
           </ul>
           <div className="double-image-wrapper mt-auto mx-auto d-flex justify-content-ce gap-3 ">
-            <img
-              className=" "
-              src={dogImg1}
-              alt={"Piesek z główką na kolanie"}
-            />
-            <img className="" src={dogImg2} alt={"Jedzący piesek"} />
+            <div className="img-hover">
+              {" "}
+              <img
+                className=" "
+                src={dogImg1}
+                alt={"Piesek z główką na kolanie"}
+              />
+            </div>
+            <div className="img-hover">
+              <img className="" src={dogImg2} alt={"Jedzący piesek"} />
+            </div>
           </div>
         </article>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,0 +1,82 @@
+@import "../../variables";
+
+.products {
+  .select-container {
+    width: 40%;
+    @include responsive-mobile(width, 70%);
+    outline: 1px solid $secondary;
+    h4 {
+      font-size: 1.25rem;
+      width: 100%;
+    }
+    select {
+      cursor: pointer;
+      width: 50%;
+      color: $faded-white;
+      background-color: $secondary;
+      border-radius: 0;
+      font-size: 1.25rem;
+    }
+  }
+  .products-list {
+    div {
+      cursor: pointer;
+      background-color: $placeholder2;
+      width: 23.1875rem; //371px for root 16px
+      height: 21.875rem; //350px for root 16px
+      @include responsive-mobile(width, 15rem);
+      @include responsive-mobile(height, 13.5rem);
+      font-size: 1.9735rem; //31px for root 16px
+      @include responsive-mobile(font-size, 1.5rem);
+    }
+  }
+
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Darken the background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it's above other content */
+
+    .popup-content {
+      width: 40%;
+      background: #fff;
+      padding: 1.25rem;
+      border-radius: 5px;
+      // box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+
+      h5 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      button {
+        border: none;
+        background: transparent;
+        padding: 0;
+        cursor: pointer;
+        img {
+          transition: all 0.3s ease;
+          scale: 0.8;
+          width: 1.9rem;
+          height: 1.9rem;
+          opacity: 0.6;
+        }
+        &:hover {
+          img {
+            filter: invert(70%);
+            rotate: 90deg;
+            opacity: 1;
+            scale: 0.9;
+          }
+        }
+      }
+    }
+  }
+}

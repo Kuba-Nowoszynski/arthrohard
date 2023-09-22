@@ -73,4 +73,10 @@ w produkcji kolagenu, co przyczynia się do zdrowia chrząstki stawowej.`,
       },
     ],
   },
+  products: {
+    header: "liczba produktów na stronie",
+    name: "Nazwa",
+    value: "Wartość",
+    loading: "Wczytywanie nowych produktów",
+  },
 };

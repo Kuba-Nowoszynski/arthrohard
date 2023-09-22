@@ -18,7 +18,7 @@ const Banner = () => {
         <img src={bannerImg} alt="Zestaw preparatów" className="img-fluid" />
       </div>
       <div className="col-12 col-md-7 px-lg-5 pt-lg-5 d-flex flex-column align-items-start">
-        <TextLogo className="big pt-xl-5 mx-auto" />
+        <TextLogo className="big pt-xl-5 mx-auto mx-md-0" />
         <div className="description text-md-start">
           {/* Split header text and add line breaks after 'Preparat' */}
           {text.header.split("\n").map((line, index) => (
@@ -26,7 +26,7 @@ const Banner = () => {
           ))}
           <p className="">{text.subheader}</p>
         </div>
-        <BuyButton className="mx-auto" />
+        <BuyButton className="mx-auto mx-md-0" />
       </div>
     </section>
   );
