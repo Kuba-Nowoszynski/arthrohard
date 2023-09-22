@@ -1,1 +1,61 @@
 @import "../../variables";
+
+.ingredients {
+  background-color: $white;
+  h2 {
+    position: relative;
+    font-size: 2.5rem; //48px for root 16px
+    @include responsive-mobile(font-size, 2rem);
+    background: linear-gradient(
+      90deg,
+      #111 -8.85%,
+      #b1b1b1 58.84%,
+      #696969 91.39%,
+      #b1b1b1 116.12%
+    );
+    width: 15rem; //change for gradient
+    @include responsive-mobile(width, 12rem);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 2rem;
+      left: 25%;
+      @include responsive-mobile(left, 20%);
+      width: 7.875rem; //126px for root 16px
+      height: 1.5px;
+      background: $main;
+    }
+  }
+  h4 {
+    font-size: 1.9375rem; //31px for root 16px
+  }
+  article {
+    min-height: 25rem; //to keep ingredients aligned horizontally
+    div {
+      background-color: $placeholder1;
+      width: 4.375rem; //70px for root 16px
+      height: 4.375rem;
+    }
+    h4 {
+      margin-top: 1.25rem; //20px for root 16px
+      margin-bottom: 2rem;
+    }
+    h6 {
+      font-weight: 400;
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    p {
+      font-size: 1.25rem;
+    }
+  }
+  .img-wrapper {
+    img {
+      scale: 1.5;
+      @include responsive-mobile(scale, 1.1);
+    }
+  }
+}

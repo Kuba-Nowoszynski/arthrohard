@@ -2,6 +2,23 @@
 
 .features {
   overflow: hidden;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("@/assets/other/bg-shape.png") no-repeat;
+    background-size: contain;
+    scale: 0.4;
+    transform: rotate(150deg);
+    top: -35%;
+    left: -55%;
+    z-index: -1;
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
   h2 {
     position: relative;
     margin-bottom: 10rem;
@@ -15,8 +32,8 @@
       #696969 91.39%,
       #b1b1b1 116.12%
     );
-    width: 40%; //change for gradient
-    @include responsive-mobile(width, 80%);
+    width: 30rem; //change for gradient
+    @include responsive-mobile(width, 12rem);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -25,10 +42,11 @@
       position: absolute;
       bottom: -1.25rem; //20px for root 16px
       left: 40%;
+      @include responsive-mobile(left, 20%);
+
       width: 7.875rem; //126px for root 16px
       height: 1.5px;
       background: $main;
-      @include responsive-mobile(left, 30%);
     }
   }
   article {

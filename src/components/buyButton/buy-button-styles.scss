@@ -1,6 +1,8 @@
 @import "../../variables";
 
 .buy-button {
+  position: relative;
+  z-index: 1; //just in case
   background-color: $tertiary;
   color: $faded-white;
   border: 0;
@@ -9,6 +11,10 @@
   transition: opacity 0.3s ease-in-out, scale 0.3s ease-in-out;
   &.red {
     background-color: #ab303c;
+    &:hover {
+      opacity: 0.85;
+      scale: 0.98;
+    }
   }
   &:hover {
     opacity: 0.85;

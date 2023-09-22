@@ -26,7 +26,7 @@ const Features = () => {
             {title.split("\n").map((line, index) => (
               <h4 key={index}>{line}</h4>
             ))}
-            <p className="">{description}</p>
+            <p className="mx-auto mx-lg-2">{description}</p>
             <div className="image-wrapper  mt-auto mx-auto   ">
               <img
                 className=" "
@@ -43,7 +43,7 @@ const Features = () => {
           <ul className="steps">
             {text.stepFeature.steps.map((step, index) => (
               <li
-                className="d-flex ms-2 mx-md-0 align-items-center justify-content-start"
+                className="d-flex ms-2 mx-lg-4 align-items-center justify-content-start"
                 key={step + index}
               >
                 <span className="number rounded-circle me-2 d-flex flex-column justify-content-center">

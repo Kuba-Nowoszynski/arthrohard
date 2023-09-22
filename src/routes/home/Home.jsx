@@ -9,9 +9,11 @@ const Home = () => {
   return (
     <div className="home container-fluid p-0 g-0">
       <Navigation />
-      <div className="content d-flex flex-column justify-content-center mx-auto">
-        <Banner />
-        <Features />
+      <div className=" mx-auto">
+        <div className="content mx-auto">
+          <Banner />
+          <Features />
+        </div>
         <Ingredients />
       </div>
     </div>
