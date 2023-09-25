@@ -4,8 +4,9 @@ import axios from "axios";
 
 import closeBtn from "@/assets/other/close-btn.png";
 import "./products-styles.scss";
+
 const Products = () => {
-  // Get text content from context
+  //Get text content from context
   const {
     text: { products: text },
   } = useContext(TextContext);
@@ -77,6 +78,7 @@ const Products = () => {
     setSelectedProduct(null);
     setShowPopup(false);
   };
+
   return (
     <section className="products mb-5" id="section3">
       <div className="select-container my-5 mx-auto d-flex justify-content-center align-items-center ">

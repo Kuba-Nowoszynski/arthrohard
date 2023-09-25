@@ -49,7 +49,7 @@ const Features = () => {
           {text.stepFeature.title.split("\n").map((line, index) => (
             <h4 key={index}>{line}</h4>
           ))}
-          <ul className="steps">
+          <ul className="steps px-lg-3">
             {text.stepFeature.steps.map((step, index) => (
               <li
                 className="d-flex ms-2 mx-lg-4 align-items-center justify-content-start"
@@ -64,15 +64,10 @@ const Features = () => {
           </ul>
           <div className="double-image-wrapper mt-auto mx-auto d-flex justify-content-ce gap-3 ">
             <div className="img-hover">
-              {" "}
-              <img
-                className=" "
-                src={dogImg1}
-                alt={"Piesek z główką na kolanie"}
-              />
+              <img src={dogImg1} alt={"Piesek z główką na kolanie"} />
             </div>
             <div className="img-hover">
-              <img className="" src={dogImg2} alt={"Jedzący piesek"} />
+              <img src={dogImg2} alt={"Jedzący piesek"} />
             </div>
           </div>
         </article>
