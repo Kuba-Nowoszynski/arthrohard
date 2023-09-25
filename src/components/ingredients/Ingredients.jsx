@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { TextContext } from "../../contexts/TextContext";
 import { motion } from "framer-motion";
+import { Parallax } from "react-parallax";
 
 import BuyButton from "../buyButton/BuyButton";
 
@@ -58,7 +59,16 @@ const Ingredients = () => {
               ))}
           </div>
         </div>
-        <img className="img-fluid px-5 mx-auto" src={dogImg} alt="Buldog" />
+        <div className="parallax-container img-fluid px-5 mx-auto img-fluid px-5 d-flex flex-column d-none d-lg-block">
+          <Parallax
+            blur={{ min: -10, max: 15 }}
+            bgImage={dogImg}
+            bgImageAlt="Buldog"
+            className="parallax mx-auto  "
+            bgClassName="px-5"
+            strength={-20}
+          ></Parallax>
+        </div>
       </motion.div>
     </section>
   );

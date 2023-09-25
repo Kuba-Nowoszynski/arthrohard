@@ -154,11 +154,11 @@
       }
     }
     img {
-      height: 14rem;
+      height: 13rem;
       @media screen and (min-width: 1440px) {
         height: 18.125rem; //290px for root 16px
       }
-      @include responsive-mobile(height, 14rem);
+      @include responsive-mobile(height, 12rem);
     }
     .img-hover {
       position: relative;

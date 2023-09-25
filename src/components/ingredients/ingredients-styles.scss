@@ -75,3 +75,12 @@
     }
   }
 }
+
+.parallax-container {
+  height: 20rem;
+  width: 80%;
+  .parallax {
+    height: 100%;
+    width: 100%;
+  }
+}

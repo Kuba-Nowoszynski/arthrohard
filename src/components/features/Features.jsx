@@ -22,7 +22,7 @@ const Features = () => {
       transition={{ duration: 0.3 }}
     >
       <h2 className="mx-auto">{text.header}</h2>
-      <div className="features-list d-flex flex-column flex-md-row justify-content-between ">
+      <div className="features-list d-flex flex-column flex-md-row justify-content-between gap-1">
         {text.descriptionFeatures.map(({ title, description }, index) => (
           <article
             key={title + index}
